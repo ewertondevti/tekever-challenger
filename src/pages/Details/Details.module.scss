@@ -1,0 +1,136 @@
+.pokemonDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png");
+    color: #212121;
+    padding-bottom: 50px;
+    position: relative;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        margin: 0 150px;
+
+        .favoriteIcon__container {
+            display: flex;
+            margin: 29px 4px;
+            height: fit-content;
+            cursor: pointer;
+        }
+
+        .backIcon {
+            @extend .favoriteIcon__container;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #1890ff;
+            background-color: #1890ff;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px 15px;
+            margin: 20px 4px;
+            position: absolute;
+            left: 30px;
+        }
+    }
+
+    .capitalize {
+        text-transform: capitalize;
+    }
+
+    h1 {
+        text-transform: capitalize;
+        font-size: 36px;
+        margin: 18px 4px;
+
+        &:last-child {
+            color: #616161;
+        }
+    }
+
+    span {
+        text-transform: capitalize;
+        margin: 10px;
+    }
+
+    .imgContainer {
+        display: grid;
+        grid-template-columns: auto auto;
+        box-sizing: border-box;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: center;
+
+        img {
+            width: 300px;
+        }
+
+        .abilitiesContainer {
+            display: flex;
+            justify-content: space-evenly;
+
+            .hiddenAbility {
+                position: relative;
+                border-radius: 5px;
+
+                &::after {
+                    content: "Hidden Ability";
+                    font-size: 10px;
+                    position: absolute;
+                    left: 0;
+                    top: -15px;
+                    font-weight: bolder;
+                    color: #001529;
+                    width: max-content;
+                }
+            }
+
+            &>span {
+                &:first-child {
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .pokemonTypes {
+            display: flex;
+            justify-content: center;
+
+            &__individual {
+                padding: 10px 30px;
+                border-radius: 5px;
+                margin: 10px 15px;
+            }
+        }
+
+        .sprites {
+            &__container {
+                margin: 10px;
+
+                img {
+                    max-width: 100px;
+                }
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+
+            &__sprites {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 10px;
+            }
+        }
+
+        .sideInfo {
+            border-radius: 10px;
+            padding: 20px 0 10px;
+        }
+    }
+}

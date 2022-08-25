@@ -1,0 +1,14 @@
+.baseStats {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+    h2 {
+        text-align: center;
+    }
+
+    &__individuals {
+        display: flex;
+        justify-content: space-between;
+    }
+}

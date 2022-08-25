@@ -1,0 +1,21 @@
+#root {
+    color: #fff;
+    font-family: "Flexo-Medium", arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
+}
+
+.ant-list-item {
+    .ant-list-item-meta {
+        align-items: center;
+    }
+}
+
+.ant-pagination-item-active {
+    a {
+        background-color: #1890ff;
+    }
+}

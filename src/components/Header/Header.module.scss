@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #001529;
+    border-bottom: 2px solid #f34a4a;
+
+    img {
+        max-height: 50px;
+        cursor: pointer;
+    }
+
+    ul {
+        min-width: 330px;
+    }
+}
