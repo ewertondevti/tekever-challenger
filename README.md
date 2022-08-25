@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with ViteJS
 
 This project was bootstrapped with [ViteJS](https://vitejs.dev/).
 
