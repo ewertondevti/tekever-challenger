@@ -23,7 +23,7 @@ const PokemonList = () => {
   const location = useLocation();
   const { pokemonId } = useParams();
   const page = getStoreItem("page");
-  const keys = Object.keys(localStorage);
+  const keys = useMemo(() => Object.keys(localStorage), [Object.keys(localStorage)]);
 
   const selectedTab = useMemo(
     () => location?.pathname.split("/").find((i) => ["all", "favorites"].includes(i)),
@@ -31,11 +31,11 @@ const PokemonList = () => {
   );
 
   useEffect(() => {
-    if (getAllPokemon && !allPokemon) {
+    if (getAllPokemon && !pokemonId) {
       getAllPokemon(0, MAX_DATA);
       setSearchInput("");
     }
-  }, [selectedTab]);
+  }, [selectedTab, pokemonId]);
 
   useEffect(() => {
     setPageNumber(Number(page));
@@ -86,8 +86,6 @@ const PokemonList = () => {
         <Spin />
       </div>
     );
-
-  console.log(filterData);
 
   return (
     <div className={styles.container}>
